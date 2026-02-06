@@ -1,0 +1,100 @@
+Create a blog with the following use cases
+
+Admin and superadmin priviledges
+The admin registration must be approved by the superadmin
+Registration for an author must be approved by the admin or superadmin
+Other users are the author and commentators 
+Registration of a commentator does not need approval
+Their should be a password reset functionality
+
+
+An author, admin and superadmins can write blogs
+An image can be uploaded to a blog and associated to a particular blog
+A blog can be deleted by an admin or superadmin
+A blog must have atleast one image
+A blog can be rated by a user who is not logged in
+
+
+A comment can be rated by a user who is logged in
+A comment can be deleted by an admin or superadmin
+A user can view all comments associated to a particular post by pagination
+
+
+Posts and comments associated to the post can be viewed by pagination
+Posts can be categorised into categories
+Only an admin or superadmin can create a category of a post
+A user can veiw all posts from a particular category with pagination
+Their should be a date when a post or comment was made
+
+Admins and superdadmins should be able to view all authors
+superadmins should be able to block an author from making posts
+Admins and superadmins should have the capacity to block a commentator
+Superadmins should have the capacity to list all admins
+Admins cannot view superadmins
+
+users should be able to log in using their gmail, yahoo and such o
+Add search functionality
+
+Use flask as the backend
+
+
+export SUPERADMIN_EMAIL=admin@example.com
+export SUPERADMIN_USERNAME=superadmin
+export SUPERADMIN_PASSWORD=supersecure123
+
+CREATE USER cycks WITH PASSWORD '*cycks@Lofty.1899';
+GRANT ALL PRIVILEGES ON DATABASE postgres TO cycks;
+
+
+
+DROP DATABASE Loftier_tests;
+
+
+CREATE DATABASE loftier_db
+CREATE USER cycks WITH PASSWORD 'new_strong_password';
+GRANT ALL PRIVILEGES ON DATABASE loftier_db TO cycks;
+
+ALTER USER sikolia WITH PASSWORD 'new_strong_password';
+
+psql -h localhost -p 5432 -U sikolia -d loftier_db
+
+
+
+CREATE USER sikolia WITH PASSWORD 'new_strong_password';
+ALTER USER sikolia CREATEDB;
+GRANT ALL PRIVILEGES ON DATABASE loftier_db TO sikolia;
+
+ALTER DATABASE loftier_db OWNER TO sikolia;
+
+ALTER SCHEMA public OWNER TO sikolia;
+GRANT ALL PRIVILEGES ON SCHEMA public TO sikolia;
+GRANT CREATE ON SCHEMA public TO sikolia;
+
+
+Create a dahsboard endpoint for users. Where a user can mark a video as watched, the rating of the movie, the author and category and sub category.
+
+Create an endpoint where a user can mark a movie as watched
+
+
+insert five images  called image1 image2, image3, image4, and image5 into 
+
+
+INSERT INTO image (url, post_id)
+VALUES
+  (http://localhost:5000/static/uploads/image1.jpg', 6),
+  ('http://localhost:5000/static/uploads/image2.jpg', 7),
+  ('http://localhost:5000/static/uploads/image3.jpg', 8),
+  ('http://localhost:5000/static/uploads/image4.jpg', 9),
+  ('http://localhost:5000/static/uploads/image5.jpg', 10);
+
+
+INSERT INTO post (title, content, created_at, author_id, category_id) VALUES
+('Post One', 'Content for the first post.', NOW(), 66, 1),
+('Post Two', 'Content for the second post.', NOW(), 67, 2),
+('Post Three', 'Content for the third post.', NOW(), 66, 3),
+('Post Four', 'Content for the fourth post.', NOW(), 67, 1),
+('Post Five', 'Content for the fifth post.', NOW(), 66, 2);
+
+
+api/post/posts_by_category
+
