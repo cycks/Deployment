@@ -1,0 +1,44 @@
+/* src/App.css */
+
+/* Previous custom-navbar-height styles here... */
+.custom-navbar-height .navbar-brand,
+.custom-navbar-height .nav-link,
+.custom-navbar-height .nav-item {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  font-size: 1.1rem;
+}
+
+.custom-navbar-height {
+  min-height: 80px;
+}
+
+.custom-navbar-height .navbar-brand {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.custom-navbar-height .navbar-toggler {
+    padding: .5rem .75rem;
+}
+
+
+/* NEW: Custom color for Loftier Movies */
+.custom-brand-color {
+  color: #0077cc !important; /* !important to ensure override Bootstrap's default text color */
+  font-weight: bold; /* Optional: Make it bold for emphasis */
+  font-size: 1.5rem; /* Optional: Adjust font size */
+}
+
+.nav-link {
+  transition: all 0.2s ease;
+  border-radius: 8px !important;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
